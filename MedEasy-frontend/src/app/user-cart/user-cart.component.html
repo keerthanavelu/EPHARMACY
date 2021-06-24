@@ -1,0 +1,58 @@
+<div *ngIf="product.length>=1; else elseBlock">
+<div class="container bdr">
+  <table class="table table-hover">
+    <tr>
+      <th colspan="3">Products</th>
+      <th colspan="2">Price</th>
+    </tr>
+    <tr *ngFor="let pro of product" class="bdr-bottom">
+      <td><img src="{{pro.items.image}}" height="200px" (click)="details(pro.items.id)"></td>
+      <td>
+        <h3 (click)="details(pro.items.id)">{{pro.items.name}}</h3>
+        <span class="text-muted" >{{pro.items.description}}</span>
+        <div class="form-group mt-3">
+          <div class="input-group">
+            <div class="input-group-btn">
+              <button class="btn" style="background: lightcoral" (click)="down(pro.items.id)"><span class="material-icons" style="font-size: small">remove</span></button>
+            </div>
+            <input type="text"  value="{{pro.quantity}}" class="form-control input-number" size="2" disabled/>
+            <div class="input-group-btn">
+              <button class="btn" style="background: lightgreen" (click)="up(pro.items.id)"><i class="material-icons" style="font-size: small">add</i></button>
+            </div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div>Delivery within 2 hours | Free Delivery</div>
+        <div class="text-muted">7 day replacement policy for Devices only</div>
+      </td>
+      <td>
+        <h2>₹{{pro.items.unitPrice}}</h2>
+      </td>
+      <td style="vertical-align:middle">
+        <button class="btn btn-danger" (click)="remove(pro.items.id)"><i class="material-icons">delete</i><span style="vertical-align: top">Remove</span></button>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div class="container mt-2 d-flex justify-content-end">
+  <h3>Total Price:- ₹{{total}}</h3>
+</div>
+
+<div class="d-flex justify-content-around mt-3">
+  <button class="btn btn-primary" routerLink="/home">Continue Ordering</button>
+  <button class="btn btn-primary" (click)="checkoutCart()">Proceed To Checkout</button>
+</div>
+</div>
+
+<ng-template #elseBlock>
+  <div class="container bdr text-center">
+    <img src="./assets/images/oops.PNG" alt="oops" height="300px" class="rounded-circle">
+    <h1 class="mt-2">Your Cart is Empty</h1>
+    <button class="btn btn-primary mt-3" routerLink="/home">Continue Ordering</button>
+  </div>
+</ng-template>
+
+<hr class="mt-3 w-75">
+<div class="size text-center text-muted"><i class="material-icons size">copyright</i><span>&nbsp;2021,Medeasy, Chennai</span></div>

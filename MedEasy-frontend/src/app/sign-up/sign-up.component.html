@@ -1,0 +1,50 @@
+<div class="color" >
+  <a routerLink="/signup" style="text-decoration: none"><h2 class="text-center text-danger mb-3 pt-2"><b><i>Medeasy</i></b></h2></a>
+  <div class="container border w-25 bg-primary rounded-lg shd">
+    <h3 class="pt-2">Signup</h3>
+    <form>
+      <div class="form-group pt-1">
+        <label for="name">Full Name:</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" [(ngModel)]="name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" [(ngModel)]="email">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="number" class="form-control" id="phone" placeholder="Enter phone" name="phone" [(ngModel)]="phone">
+      </div>
+      
+      <label>Gender:</label>
+      <div>
+        <label><input type="radio" name="gender" [(ngModel)]="gender" value="male"> Male &nbsp;</label>
+        <label><input type="radio" name="gender" [(ngModel)]="gender" value="female"> Female</label>
+      </div>
+
+      <label>Authorize:</label>
+      <div>
+        <label><input type="radio" name="authorize" [(ngModel)]="authorize" value="basic"> Basic &nbsp;</label>
+        <label><input type="radio" name="authorize" [(ngModel)]="authorize" value="admin"> Admin</label>
+      </div>
+
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" [(ngModel)]="password">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Confirm Password:</label>
+        <input type="password" class="form-control" id="cpwd" placeholder="Confirm password" name="pwd" [(ngModel)]="cpassword">
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" name="remember"> I agree to all terms and conditions</label>
+      </div>
+      <div class="text-center mb-3">
+       <button type="submit" class="btn btn-dark" (click)="finaldata()">Signup</button>
+      </div>
+    </form>
+    <div class="mb-3">Already have an account? <span class="text-danger log" routerLink="/login"><i><b>Login</b></i></span> </div>
+  </div>
+  <hr class="w-75 mt-3">
+  <div class="size text-center text-muted pb-2"><i class="material-icons size">copyright</i><span>&nbsp;2021, Medeasy, Chennai</span></div>
+</div>

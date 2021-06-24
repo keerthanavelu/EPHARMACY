@@ -1,0 +1,41 @@
+<div class="row mt-5 pt-5 container ">
+  <div class="col-6 text-center">
+    <img src="{{userImg}}" alt="user" class="rounded-circle">
+    <div class="mt-4">
+      <button class="btn btn-primary" (click)="toggle()">Edit Profile</button>
+    </div>
+    <div class="mt-4" *ngIf="user.authorize!='admin'">
+      <button class="btn btn-primary" routerLink="/orderhistory">Order History</button>
+    </div>
+  </div>
+  <div class="col-6" *ngIf="user">
+    <div class="mb-4">
+      <h4>Full Name :-</h4>
+      <input type="text" value="{{user.name}}" size="100" class="pl-2 p-1" [disabled]="disabled" [(ngModel)]="user.name">
+    </div>
+    <div class="mb-4">
+      <h4>Gender :-</h4>
+      <label><input type="radio" name="gender" [(ngModel)]="user.gender" value="male" class="pl-2 p-1" [disabled]="disabled"> Male &nbsp;</label>
+      <label><input type="radio" name="gender" [(ngModel)]="user.gender" value="female" class="pl-2 p-1" [disabled]="disabled"> Female</label>
+    </div>
+    <div class="mb-4">
+      <h4>Role :-</h4>
+      <input type="text" value="{{user.authorize}}" size="100" class="pl-2 p-1" disabled>
+    </div>
+    <div class="mb-4">
+      <h4>Phone :-</h4>
+      <input type="number" value="{{user.phone}}" size="100" class="pl-2 p-1" [disabled]="disabled" [(ngModel)]="user.phone">
+    </div>
+    <div class="mb-4">
+      <h4>Address :-</h4>
+      <textarea class="pl-2 p-1" rows="4" cols="105" [disabled]="disabled" [(ngModel)]="user.address" placeholder="Enter Your Address"></textarea>
+    </div>
+  </div>
+</div>
+
+<div class="mt-3 text-center">
+  <button class="btn btn-primary" (click)="save()">Save</button>
+</div>
+
+<hr class="mt-3 w-75">
+<div class="size text-center text-muted"><i class="material-icons size">copyright</i><span>&nbsp;2021, MedEasy, Chennai</span></div>

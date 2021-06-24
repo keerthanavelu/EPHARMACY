@@ -1,0 +1,43 @@
+.color {
+  background: #b8d3ee;
+}
+.bdr-top {
+  border-top: 2px solid gray;
+}
+.bdr-top-left {
+  border-top: 2px solid gray;
+  border-left: 2px solid gray;
+}
+.size {
+  font-size: x-small;
+}
+
+a {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.shd {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.zoom {
+  transition: transform .2s;
+  margin: 0 auto;
+}
+.zoom:hover {
+  transform: scale(1.05);
+}
+.menu
+{
+  position:fixed;
+  bottom:1rem;
+  right:1rem;
+}
+.menu:hover {
+  cursor: pointer;
+}
+

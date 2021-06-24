@@ -1,0 +1,22 @@
+<div class="container bdr">
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>Sr.</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Authorize</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users; index as i">
+      <td>{{i+1}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.phone}}</td>
+      <td>{{user.authorize}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

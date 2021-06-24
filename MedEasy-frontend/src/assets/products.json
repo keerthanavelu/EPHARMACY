@@ -1,0 +1,72 @@
+[
+  {
+    "id": "1",
+    "name": "Samsung s10+",
+    "image": "./assets/images/samsung.PNG",
+    "spec": "6GB|256GB|5000 mAH",
+    "price": "₹5000"
+  },
+  {
+    "id": "2",
+    "name": "Cricket Bat",
+    "image": "./assets/images/cricket_bat.PNG",
+    "spec": "700g",
+    "price": "₹350"
+  },
+  {
+    "id": "3",
+    "name": "Fitness Band",
+    "image": "./assets/images/fitness_band.PNG",
+    "spec": "Regular",
+    "price": "₹1500"
+  },
+  {
+    "id": "4",
+    "name": "Iphone Xs",
+    "image": "./assets/images/iphone.PNG",
+    "spec": "3GB|64GB|3000 mAH",
+    "price": "₹1999"
+  },
+  {
+    "id": "5",
+    "name": "The Room 105",
+    "image": "./assets/images/the_room_105.PNG",
+    "spec": "English|Chetan Bhagat",
+    "price": "₹259"
+  },
+  {
+    "id": "6",
+    "name": "T-Shirts",
+    "image": "./assets/images/T-Shirts.PNG",
+    "spec": "Full Sleeve|Reebok",
+    "price": "₹850"
+  },
+  {
+    "id": "7",
+    "name": "Punching Bag",
+    "image": "./assets/images/punching_bag.PNG",
+    "spec": "4feet|2Kg",
+    "price": "₹999"
+  },
+  {
+    "id": "8",
+    "name": "Shoes",
+    "image": "./assets/images/shoes.PNG",
+    "spec": "Casual",
+    "price": "₹379"
+  },
+  {
+    "id": "9",
+    "name": "Denver",
+    "image": "./assets/images/denver.PNG",
+    "spec": "Deo + Perfume",
+    "price": "₹323"
+  },
+  {
+    "id": "10",
+    "name": "Physics",
+    "image": "./assets/images/physics.PNG",
+    "spec": "English|HC Verma",
+    "price": "₹1250"
+  }
+]
